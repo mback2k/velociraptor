@@ -54,6 +54,10 @@ func getAuthenticatorByType(
 		return &BasicAuthenticator{
 			config_obj: config_obj,
 		}, nil
+	case "header":
+		return &HeaderAuthenticator{
+			config_obj: config_obj,
+		}, nil
 	case "oidc":
 		return &OidcAuthenticator{
 			config_obj:    config_obj,
